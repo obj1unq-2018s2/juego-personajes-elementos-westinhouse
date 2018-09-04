@@ -1,0 +1,49 @@
+import armas.*
+import elementos.*
+import jugadoresPersonajes.*
+
+
+test "mario recolecto 45 unidades y es feliz" {
+
+	luisa.asignarPersonaje(mario)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	//Verificacion de los valores pedidos
+	assert.equals(mario.totalRecolectado(), 45)
+	assert.equals(mario.esFeliz(), true)
+    assert.equals(castillo.defensa(), 170)
+}
+
+test "Luisa juega con Mario y después con Floki"{
+	floki.asignarArma(jabalina)
+	luisa.asignarPersonaje(mario)
+	luisa.aparece(tipa)
+	luisa.asignarPersonaje(floki)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	//Verificacion de los valores pedidos
+	assert.equals(mario.totalRecolectado(), 16)
+	assert.equals(tipa.altura(), 9)
+	assert.equals(mario.esFeliz(), false)
+	assert.equals(aurora.estaViva(), false)
+	assert.equals(castillo.defensa(), 150)
+	assert.equals(jabalina.estaCargada(), false)
+}
+
+
+test "Luisa juega solo con floki"{
+	floki.asignarArma(ballesta)
+	luisa.asignarPersonaje(floki)
+	luisa.aparece(aurora)
+	luisa.aparece(castillo)
+	
+	//Verificacion de los valores pedidos
+	
+	assert.equals(mario.totalRecolectado(), 0)
+	assert.equals(aurora.estaViva(), true)
+	assert.equals(castillo.defensa(), 146)
+	assert.equals(ballesta.estaCargada(), true)
+	assert.equals(ballesta.flechas(), 8)
+	
+		
+}
