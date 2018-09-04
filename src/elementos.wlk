@@ -1,4 +1,5 @@
 object castillo {
+	
 	var property defensa = 150
 	
 	method altura() = 20

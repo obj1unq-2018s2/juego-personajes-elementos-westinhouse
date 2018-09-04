@@ -1,4 +1,5 @@
 object ballesta {
+	
 	var property flechas = 10
 	
 	method registrarUso() { flechas -= 1 }

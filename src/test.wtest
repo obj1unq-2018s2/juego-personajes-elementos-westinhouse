@@ -8,7 +8,9 @@ test "mario recolecto 45 unidades y es feliz" {
 	luisa.asignarPersonaje(mario)
 	luisa.aparece(aurora)
 	luisa.aparece(castillo)
+	
 	//Verificacion de los valores pedidos
+	
 	assert.equals(mario.totalRecolectado(), 45)
 	assert.equals(mario.esFeliz(), true)
     assert.equals(castillo.defensa(), 170)
@@ -21,7 +23,9 @@ test "Luisa juega con Mario y después con Floki"{
 	luisa.asignarPersonaje(floki)
 	luisa.aparece(aurora)
 	luisa.aparece(castillo)
+	
 	//Verificacion de los valores pedidos
+	
 	assert.equals(mario.totalRecolectado(), 16)
 	assert.equals(tipa.altura(), 9)
 	assert.equals(mario.esFeliz(), false)

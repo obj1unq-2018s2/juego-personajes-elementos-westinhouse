@@ -30,7 +30,7 @@ object mario {
 	method encontrar(elemento) {
 	    valorRecolectado += elemento.valorQueOtorga()
 	    elemento.recibirTrabajo()
-	    alturaUltimoElemento += elemento.altura()
+	    alturaUltimoElemento += elemento.altura() //Realizacion de la linea faltante
 	}
 	method esFeliz(){
 		return(valorRecolectado == 50 || alturaUltimoElemento >= 10)
